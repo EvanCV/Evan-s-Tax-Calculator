@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orange_bg" translatesAutoresizingMaskIntoConstraints="NO" id="xz4-7a-GwC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Price $$" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNi-nm-UhJ">
+                                <rect key="frame" x="217" y="285" width="166" height="30"/>
+                                <color key="textColor" red="0.35704703282828287" green="0.35704703282828287" blue="0.35704703282828287" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oaF-SK-f4q">
+                                <rect key="frame" x="217" y="337" width="166" height="29"/>
+                                <segments>
+                                    <segment title="CA"/>
+                                    <segment title="CHI"/>
+                                    <segment title="NYC"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9L-wT-m6y">
+                                <rect key="frame" x="217" y="389" width="166" height="30"/>
+                                <state key="normal" title="Calculate Sales Tax"/>
+                                <connections>
+                                    <action selector="onCalculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KTw-Sz-tBv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tax Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKi-Cf-UA6">
+                                <rect key="frame" x="217" y="134" width="166" height="57"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.45584909539473684" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpG-Hx-Wr9">
+                                <rect key="frame" x="217" y="256" width="166" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.45584909540000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="oaF-SK-f4q" secondAttribute="centerX" id="4Af-cN-hYb"/>
+                            <constraint firstAttribute="centerX" secondItem="zNi-nm-UhJ" secondAttribute="centerX" id="7mO-RA-OS1"/>
+                            <constraint firstAttribute="centerX" secondItem="UKi-Cf-UA6" secondAttribute="centerX" id="982-pW-iV1"/>
+                            <constraint firstItem="BpG-Hx-Wr9" firstAttribute="top" secondItem="UKi-Cf-UA6" secondAttribute="bottom" constant="65" id="FUN-v3-AHQ"/>
+                            <constraint firstAttribute="centerX" secondItem="UKi-Cf-UA6" secondAttribute="centerX" id="Q8N-Q5-M7z"/>
+                            <constraint firstAttribute="centerX" secondItem="zNi-nm-UhJ" secondAttribute="centerX" id="S0a-zX-2B6"/>
+                            <constraint firstAttribute="centerX" secondItem="oaF-SK-f4q" secondAttribute="centerX" id="US2-g2-Fo0"/>
+                            <constraint firstAttribute="centerX" secondItem="R9L-wT-m6y" secondAttribute="centerX" id="ZtI-Do-woC"/>
+                            <constraint firstAttribute="centerX" secondItem="UKi-Cf-UA6" secondAttribute="centerX" id="bKS-Ii-c0y"/>
+                            <constraint firstAttribute="centerX" secondItem="BpG-Hx-Wr9" secondAttribute="centerX" id="p8w-mM-qOi"/>
+                            <constraint firstAttribute="centerX" secondItem="R9L-wT-m6y" secondAttribute="centerX" id="x9F-7Q-eoH"/>
+                            <constraint firstItem="UKi-Cf-UA6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="114" id="yjv-gO-VBv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="priceTextField" destination="zNi-nm-UhJ" id="dBu-nf-0LR"/>
+                        <outlet property="resultLabel" destination="BpG-Hx-Wr9" id="E39-31-b7x"/>
+                        <outlet property="segmentedControl" destination="oaF-SK-f4q" id="m24-qq-cjV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="orange_bg" width="160" height="284"/>
+    </resources>
+</document>
