@@ -53,16 +53,16 @@
     if (self.segmentedControl.selectedSegmentIndex == 0)
     {
         double result = enteredValue * self.caTax;
-        self.resultLabel.text = [NSString stringWithFormat:@"$%f", result];
+        self.resultLabel.text = [NSString stringWithFormat:@"$%.2f", result];
     }
 
     else if (self.segmentedControl.selectedSegmentIndex == 1){
         double result = enteredValue * self.chiTax;
-        self.resultLabel.text = [NSString stringWithFormat:@"$%f", result];
+        self.resultLabel.text = [NSString stringWithFormat:@"$%.2f", result];
     }
     else {
         double result = enteredValue * self.nyTax;
-        self.resultLabel.text = [NSString stringWithFormat:@"$%f", result];
+        self.resultLabel.text = [NSString stringWithFormat:@"$%.2f", result];
     }
 }
 
